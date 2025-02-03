@@ -1,15 +1,17 @@
-package enumeration;
+package enumeration.ex4;
+
+import enumeration.ex3.ClassGrade;
 
 public class DiscountService {
 
-    public int discount(String grade, int price) {
+    public int discount(Grade classGrade, int price) {
         int discountPercent = 0;
 
-        if(grade.equals("BASIC")) {
+        if(classGrade == Grade.BASIC) {
             discountPercent = 10;
-        } else if(grade.equals("GOLD")) {
+        } else if(classGrade == Grade.GOLD) {
             discountPercent = 20;
-        } else if(grade.equals("DIAMOND")) {
+        } else if (classGrade == Grade.DIAMOND) {
             discountPercent = 30;
         } else {
             System.out.println("할인 X");
